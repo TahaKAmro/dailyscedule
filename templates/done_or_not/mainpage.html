@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/mainpage.css" %}">
+    <title>My daily schadule</title>
+</head>
+<body>
+    <div class="parent">
+        {% for i in day %}
+        {% if i.points_sum > 12 %}
+        <section class="good">
+            <div class="date">
+                <h1>{{i.date}}</h1>
+            </div>
+            <hr><hr>
+            <div class='details'>
+                <h2>Alfajr :</h2><h3>{{i.Alfajr}}</h3>
+                <hr>
+                <h2>Aldohr :</h2><h3>{{i.Aldohr}}</h3>
+                <hr>
+                <h2>Al3asr :</h2><h3>{{i.Al3asr}}</h3>
+                <hr>
+                <h2>Almaghrib :</h2><h3>{{i.Almaghrib}}</h3>
+                <hr>
+                <h2>Al3eshaa :</h2><h3>{{i.Al3esha}}</h3>
+                <hr>
+                <h2>Daily_quraan :</h2><h3>{{i.daily_quraan}}</h3>
+                <hr>
+                <h2>the thiusand pray :</h2><h3>{{i.the_thousand_pray}}</h3>
+                <hr>
+                <h2>Alsonan :</h2><h3>{{i.alsonan}}</h3>
+                <hr>
+                <h2>Altasbee7 :</h2><h3>{{i.tasbee7}}</h3>
+                <hr>
+                <h2>Notes :</h2><h3>{{i.notes}}</h3>
+            </div>
+        </section>
+        {% else %}
+        <section class="bad">
+            <div class="date">
+                <h1>{{i.date}}</h1>
+            </div>
+            <hr><hr>
+            <div class='details'>
+                <h2>Alfajr :</h2><h3>{{i.Alfajr}}</h3>
+                <hr>
+                <h2>Aldohr :</h2><h3>{{i.Aldohr}}</h3>
+                <hr>
+                <h2>Al3asr :</h2><h3>{{i.Al3asr}}</h3>
+                <hr>
+                <h2>Almaghrib :</h2><h3>{{i.Almaghrib}}</h3>
+                <hr>
+                <h2>Al3eshaa :</h2><h3>{{i.Al3esha}}</h3>
+                <hr>
+                <h2>Daily_quraan :</h2><h3>{{i.daily_quraan}}</h3>
+                <hr>
+                <h2>the thiusand pray :</h2><h3>{{i.the_thousand_pray}}</h3>
+                <hr>
+                <h2>Alsonan :</h2><h3>{{i.alsonan}}</h3>
+                <hr>
+                <h2>Altasbee7 :</h2><h3>{{i.tasbee7}}</h3>
+                <hr>
+                <h2>Notes :</h2><h3>{{i.notes}}</h3>
+            </div>
+        </section>
+        {% endif %}
+        
+        {% endfor %}
+    </div>
+</body>
